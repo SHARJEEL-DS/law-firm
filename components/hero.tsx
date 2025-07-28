@@ -1,0 +1,33 @@
+import Image from "next/image"
+
+export default function Hero() {
+  return (
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://www.wlrk.com/wp-content/uploads/2019/01/WLRK_Home_Photo.jpg" // Replace with your image path or external URL
+          alt="Skyscrapers viewed from below against blue sky"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
+      </div>
+
+      {/* Centered Title */}
+      <div className="relative z-10 flex items-center justify-center h-full">
+        <h1 className="text-white text-center text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.2em] leading-tight">
+          WACHTELL, LIPTON, ROSEN & KATZ
+        </h1>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce" />
+        </div>
+      </div>
+    </section>
+  )
+}
