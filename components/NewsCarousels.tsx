@@ -55,7 +55,7 @@ const newsItems = [
   },
 ];
 
-export default function NewsCarousel() {
+export default function NewsCarousels() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -75,7 +75,7 @@ export default function NewsCarousel() {
     <div className="flex justify-between items-center bg-[#d5d5d5] h-[60px]">
       <div className="flex items-center px-6">
         <h2 className="text-xs font-semibold text-gray-700 tracking-widest uppercase">
-          News & Publications
+          Recent Representations
         </h2>
       </div>
       <Link

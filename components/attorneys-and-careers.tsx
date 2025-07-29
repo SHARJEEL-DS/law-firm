@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
+
 export default function AttorneysAndCareers() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -43,33 +44,7 @@ export default function AttorneysAndCareers() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-6">
-            {/* Firm Name */}
-            <h3 className="text-2xl lg:text-3xl font-serif text-gray-600 tracking-wider">
-              WACHTELL, LIPTON, ROSEN & KATZ
-            </h3>
-
-            {/* Divider */}
-            <div className="flex justify-center">
-              <div className="w-16 h-px bg-gray-300"></div>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-2 text-gray-600">
-              <p className="text-sm">51 West 52nd Street, New York, NY 10019</p>
-              <p className="text-sm">
-                t. 212.403.1000 or 800.848.0301 /{" "}
-                <Link href="#" className="text-blue-600 hover:text-blue-700 underline transition-colors duration-200">
-                  Attorney Advertising and Other Notices
-                </Link>
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+  
     </div>
   )
 }

@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Centered Title */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <h1 className="text-white text-center text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.2em] leading-tight">
-          WACHTELL, LIPTON, ROSEN & KATZ
+         FLA advokáti, s. r. o.
         </h1>
       </div>
 

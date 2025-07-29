@@ -29,10 +29,12 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className={clsx(
-      "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-      scrolled ? "bg-white shadow-md" : "bg-transparent"
-    )}>
+    <nav
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
+        scrolled ? "bg-black shadow-md" : "bg-transparent"
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Desktop Menu */}
@@ -43,7 +45,7 @@ export default function Navigation() {
                 href={item.href}
                 className={clsx(
                   "text-sm font-semibold tracking-wide transition-colors",
-                  scrolled ? "text-black hover:text-gray-700" : "text-white hover:text-gray-300"
+                  "text-white hover:text-gray-300"
                 )}
               >
                 {item.name}
@@ -56,10 +58,10 @@ export default function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={() => setIsSearchOpen((v) => !v)}
               className={clsx(
                 "hover:bg-white/10",
-                scrolled ? "text-black hover:text-gray-700" : "text-white hover:text-gray-300"
+                "text-white hover:text-gray-300"
               )}
             >
               <Search className="h-4 w-4 mr-2" />
@@ -72,11 +74,9 @@ export default function Navigation() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={clsx(
-                scrolled ? "text-black" : "text-white",
-                "hover:text-gray-300"
-              )}
+              onClick={() => setIsMenuOpen((v) => !v)}
+              className={clsx("text-white hover:text-gray-300")}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
