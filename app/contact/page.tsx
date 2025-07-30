@@ -1,56 +1,77 @@
-/* eslint-disable @next/next/no-img-element */
-import { MapPin, Phone, Mail } from "lucide-react";
+import Header from "@/components/Header"
+import { Phone, Search } from "lucide-react"
+import Image from "next/image"
 
 export default function ContactPage() {
   return (
     <div className="bg-white min-h-screen">
-      {/* Header with background and firm name */}
-      <div
-        className="bg-cover bg-center text-white py-20 px-4"
-        style={{ backgroundImage: "url('/contact-header.jpg')" }} // Place image in /public
-      >
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-light tracking-wide uppercase">
-            FLA advokáti, s. r. o.
-          </h1>
-        </div>
-      </div>
-
+      {/* Header with geometric background and navigation */}
+<Header/>
       {/* Main content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left - Map Image */}
-        <div>
-          <img
-            src="/befaa0ba-e101-4b5f-8477-818a89e34ae1.png" // Your uploaded map image (move to /public)
-            alt="Map to office"
-            className="rounded-md w-full shadow"
-          />
-        </div>
-
-        {/* Right - Contact Info */}
-        <div>
-          <h2 className="text-3xl font-light text-gray-900 mb-6">Contact Us</h2>
-          <div className="space-y-4 text-gray-800 text-base">
-            <p className="font-semibold">FLA advokáti, s. r. o.</p>
-            <p>Vajnorská 1854/8A</p>
-            <p>831 04 Bratislava - m.č. Nové Mesto</p>
-            <p>IČO: 56 273 592</p>
-            <p>DIČ: 2122254882</p>
-            <p>
-              Bankové spojenie (Tatrabanka):<br />
-              IBAN: SK44 1100 0000 0029 4217 0344
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left - Map */}
+          <div className="space-y-4">
+            <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="Mapa k našej kancelárii"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
-          <div className="mt-8">
-            <img
-              src="/contact-badge.png" // Optional contact visual badge (if you want to reuse logo or contact UI image)
-              alt="Contact visual"
-              className="w-40"
-            />
+          {/* Right - Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl font-light text-gray-800 mb-8 tracking-wide">Contact Us</h1>
+
+              <div className="space-y-1 text-gray-700 leading-relaxed">
+                <p className="text-lg font-medium text-gray-800 mb-4">
+                  To contact the appropriate people or departments, please use the contact information below:
+                </p>
+
+                <div className="space-y-3">
+                  <p className="text-lg font-semibold text-gray-800">FLA advokáti, s. r. o.</p>
+                  <p>Vajnorská 1854/8A</p>
+                  <p>831 04 Bratislava - m.č. Nové Mesto</p>
+                  <p>IČO: 56 273 592</p>
+                  <p>DIČ: 2122254882</p>
+                </div>
+
+                <div className="pt-4 space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-4 h-4 text-gray-600" />
+                    <span>T +421 2 XXX XXX XXX</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-4 h-4 text-gray-600" />
+                    <span>F +421 2 XXX XXX XXX</span>
+                  </div>
+                </div>
+
+                <div className="pt-6">
+                  <p className="text-sm text-gray-600">Bankové spojenie (Tatrabanka):</p>
+                  <p className="font-mono text-sm">IBAN: SK44 1100 0000 0029 4217 0344</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-8 border-t border-gray-200">
+              <p className="text-gray-600">
+                For general inquiries, please contact:{" "}
+                <a href="mailto:info@fla-advokati.sk" className="text-blue-600 hover:underline">
+                  info@fla-advokati.sk
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+     
     </div>
-  );
+  )
 }

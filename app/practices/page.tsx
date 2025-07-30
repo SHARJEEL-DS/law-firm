@@ -1,3 +1,5 @@
+import Header from "@/components/Header"
+
 export default function PracticesPage() {
   const practices = [
     {
@@ -27,6 +29,8 @@ export default function PracticesPage() {
   ]
 
   return (
+    <>
+      <Header   />
     <div className="pt-16 min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 className="text-4xl font-light text-gray-900 mb-12 tracking-wide">PRACTICES</h1>
@@ -41,5 +45,6 @@ export default function PracticesPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
