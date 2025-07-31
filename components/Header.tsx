@@ -6,12 +6,12 @@ function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { label: "FIRMA", href: "#" },
-    { label: "ADVOKÁTI", href: "#" },
-    { label: "PRAX", href: "#" },
-    { label: "AKTUALITY A PUBLIKÁCIE", href: "#" },
-    { label: "KARIÉRA", href: "#" },
-    { label: "KONTAKT", href: "#" },
+    { label: "FIRMA", href: "/firm" },
+    { label: "ADVOKÁTI", href: "/careers" },
+    { label: "PRAX", href: "/contact" },
+    { label: "AKTUALITY A PUBLIKÁCIE", href: "/attorneys" },
+    { label: "KARIÉRA", href: "/news" },
+    { label: "KONTAKT", href: "/practices" },
   ];
 
   return (

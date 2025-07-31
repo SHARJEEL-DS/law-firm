@@ -1,6 +1,7 @@
-import Header from "@/components/Header"
+// import Header from "@/components/Header"
 import { Phone, Search } from "lucide-react"
 import Image from "next/image"
+import Header from "@/components/navigation";
 
 export default function ContactPage() {
   return (
