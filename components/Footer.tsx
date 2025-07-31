@@ -16,8 +16,8 @@ function Footer() {
             {/* Logo and Firm Name */}
             <div className="flex flex-col items-center space-y-4">
               <img
-                src="/unnamed.jpg" // Ensure it's in the /public folder
-                className="w-32 h-auto" // Adjust size as needed (128px width)
+                src="/5e81f4e5-9017-446b-8814-6502bdbbd863.jpg" // Ensure it's in the /public folder
+                className="w-52 h-40" // Adjust size as needed (128px width)
               />
               <h3 className="text-3xl lg:text-4xl font-serif text-gray-700 tracking-wide">
                 FLA advokáti, s. r. o.
