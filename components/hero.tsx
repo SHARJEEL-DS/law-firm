@@ -1,13 +1,27 @@
-import Image from "next/image"
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Hero() {
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTyping(false);
+      setTimeout(() => setTyping(true), 50); // reset to restart animation
+    }, 10000); // every 10 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://www.wlrk.com/wp-content/uploads/2019/01/WLRK_Home_Photo.jpg" // Replace with your image path or external URL
-          alt="Skyscrapers viewed from below against blue sky"
+          src="https://img.freepik.com/premium-photo/law-scales-table_225446-8521.jpg"
+          alt="Law Scales on Table"
           fill
           className="object-cover"
           priority
@@ -15,10 +29,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      {/* Centered Title */}
-      <div className="relative z-10 flex items-center justify-center h-full">
-        <h1 className="text-white text-center text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.2em] leading-tight">
-         FLA advokáti, s. r. o.
+      {/* Centered Typing Title */}
+      <div className="relative z-10 flex items-center justify-center h-full px-4">
+        <h1
+          className={`text-white text-center text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.2em] leading-tight whitespace-nowrap overflow-hidden w-[24ch] ${
+            typing ? "animate-typing border-r-2 " : "border-none"
+          }`}
+        >
+          FLA advokáti, s. r. o.
         </h1>
       </div>
 
@@ -29,5 +47,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
